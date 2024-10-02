@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portofolio Rizz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">---</a>
+
+        <nav class="navbar">
+            <a href="#Home" class="active">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#myworks">My Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="Home">
+        <div class="home-content">
+            <h1>Hi , I'm Rizky Pujianto</h1>
+            <h3>Frontend Developer</h3>
+            <p>As a frontend developer, I bridge the gap between design and technology, delivering intuitive interfaces that engage users and elevate experiences</p>
+            <div class="btn-box">
+                <a href="#">Hire Me</a>
+                <a href="#">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.instagram.com/eyy.rzkyy_" target="_blank">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://github.com/rizkypujianto" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.tiktok.com/@rizkymokyy" target="_blank">
+                <i class='bx bxl-tiktok'></i>
+            </a>
+            <a href="https://wa.me/6285176720069" target="_blank">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+        </div>
+
+        <span class="home-imgHover"></span>
+    </section>
+
+    <div class="wave-separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,144C320,160,400,224,480,218.7C560,213,640,139,720,101.3C800,64,880,64,960,96C1040,128,1120,192,1200,208C1280,224,1360,192,1400,176L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+    
+    </div>
+
+    <section class="about" id="About">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-content animate">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm Rizky Pujianto, a passionate Frontend Developer with a strong focus on creating responsive, user-friendly websites. I have a deep understanding of HTML, CSS, and JavaScript, and I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+                    </p>
+                    <p>
+                         With experience in frameworks like Bootstrap and a keen eye for design, I ensure that every project I work on not only functions well but looks amazing too. Let's collaborate to bring your ideas to life!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services" id="Services">
+        <div class="services-container">
+            <h4>My Services</h4>
+            <div class="services-content animate">
+                <div class="services-content">
+                <div class="services-images">
+                        <img src="frontend.svg" alt="Service 1" class="service-img">
+                        <img src="webdesign.svg" alt="Service 2" class="service-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="myworks" id="myworks"></section>
+        <div class="myworks-container">
+            <h5>My Works</h5>
+            <div class="myworks-content animate">
+                <div class="myworks-content">
+                <div class="myworks-images">
+                        <img src="kedaikita.png" alt="My Works 1" class="service-img">
+                        <img src="splrent.png" alt="My Works 2" class="service-img">
+                        <img src="touring.png" alt="My Works 3" class="service-img">
+                        <img src="card.png" alt="My Works 4" class="service-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="Contact" id="contact"></section>
+        <div class="column">
+            <h6>Interested in working with me?</h6>
+            <button onclick="window.location.href = 'mailto:rizkypujianto73@gmail.com'" class="emailme">
+                Email Me <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutContent = document.querySelector('.about-content');
+            const servicesContent = document.querySelector('.services-content');
+    
+            const addAnimation = (element) => {
+                const boxTop = element.getBoundingClientRect().top;
+                const triggerBottom = window.innerHeight / 5 * 4; 
+    
+                if (boxTop < triggerBottom) {
+                    element.classList.add('animate');
+                }
+            }
+    
+            window.addEventListener('scroll', () => {
+                addAnimation(aboutContent);
+                addAnimation(servicesContent);
+            });
+    
+            addAnimation(aboutContent);
+            addAnimation(servicesContent);
+        });
+    </script>
+    
+    
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+
+</body>
