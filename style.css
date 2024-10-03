@@ -67,15 +67,69 @@ body {
     color: rgb(72, 199, 231);
 }
 
-.home{
+.home {
     height: 100vh;
-    background-image: url('capebgt.jpg') ;
+    background-image: url('capebgt.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
-    align-items: center ;
+    align-items: center;
     padding: 0 10%;
 }
+
+/* Responsiveness for tablets */
+@media (max-width: 768px) {
+    .home {
+        background-size: cover;
+        background-position: top center;
+        padding: 0 5%;
+    }
+    
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 480px) {
+    .home {
+        background-size: cover;
+        background-position: center;
+        padding: 0 5%;
+    }
+
+    .home-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-box a {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
 
 .home-content {
     display: flex;
@@ -577,7 +631,7 @@ h6 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 470px) {
     .home-content h1 {
         font-size: 1.5rem;
     }
@@ -607,6 +661,7 @@ h6 {
         width: 100%;
         margin-bottom: 20px;
     }
+
 }
 
 p {
